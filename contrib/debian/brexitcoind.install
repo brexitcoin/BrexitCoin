@@ -1,0 +1,2 @@
+debian/bin/brexitd usr/bin
+src/brexitd usr/lib/brexit

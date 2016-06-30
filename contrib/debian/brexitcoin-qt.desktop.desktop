@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Brexit
+Comment=Brexit P2P Cryptocurrency
+Exec=/usr/bin/brexit-qt
+Terminal=false
+Type=Application
+Icon=/usr/share/pixmaps/bitcoin80.xpm
+MimeType=x-scheme-handler/brexit;
+Categories=Office;
+Name[en_IN]=brexit-qt.desktop

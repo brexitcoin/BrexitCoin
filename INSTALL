@@ -1,0 +1,9 @@
+Building Brexit
+
+See doc/readme-qt.rst for instructions on building Brexit QT,
+the intended-for-end-users, nice-graphical-interface, reference
+implementation of Brexit.
+
+See doc/build-*.txt for instructions on building brexitd,
+the intended-for-services, no-graphical-interface, reference
+implementation of Brexit.
