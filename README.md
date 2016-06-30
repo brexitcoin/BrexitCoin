@@ -1,32 +1,107 @@
+# **Brexit (BRXT) Version 1.1.0.0**
 
-Brexit development tree
+Brexit Integration/Staging Tree
+================================
+![BRXT logo](https://raw.githubusercontent.com/brexitcoin/BrexitCoin/master/src/qt/res/icons/novacoin-128.png)
 
-Brexit is a PoS-based cryptocurrency.
+**Copyright (c) 2016 The Brexit Developers**
 
-Development process
-===========================
+#### What is Brexit?
+----------------
+* Algorithm: Scrypt
+* Coin Suffix: BRXT
+* PoW Period: 62016 Blocks
+* PoW Target Spacing: 60 Seconds
+* PoW Difficulty Retarget: 8 Blocks
+* PoW Reward per Block: 1000 BRXT
+* Full Confirmation: 8 Blocks
+* Maturity: 16 Blocks
+* PoS Target Spacing: 64 Seconds
+* PoS Difficulty Retarget: 10 Blocks
+* PoS Reward: 4% 
+* Minimum Confirmations for Stake: 16 Blocks
+* PoS Min: 4 Hour
+* PoS Max: Unlimited
+* Total Coins: 494,117,647 BRXT
+* Block Size: 1MB
 
-Developers work in their own trees, then submit pull requests when
-they think their feature or bug fix is ready.
 
-The patch will be accepted if there is broad consensus that it is a
-good thing.  Developers should expect to rework and resubmit patches
-if they don't match the project's coding conventions (see coding.txt)
-or are controversial.
+Brexit is a digital currency that enables instant payments to anyone, anywhere in the world. Brexit uses peer-to-peer technology over ClearNet to operate with no central authority (centralisation): managing transactions and issuing currency (BRXT) are carried out collectively by the Brexit network. Brexit is the name of open source software which enables the use of the currency BRXT.
 
-The master branch is regularly built and tested, but is not guaranteed
-to be completely stable. Tags are regularly created to indicate new
-stable release versions of Brexit.
 
-Feature branches are created when there are major new features being
-worked on by several people.
 
-From time to time a pull request will become outdated. If this occurs, and
-the pull is no longer automatically mergeable; a comment on the pull will
-be used to issue a warning of closure. The pull will be closed 15 days
-after the warning if action is not taken by the author. Pull requests closed
-in this manner will have their corresponding issue labeled 'stagnant'.
+**MainNet Parameters**
+P2P Port = 7511
+RPC Port = 7512
 
-Issues with no commits will be given a similar warning, and closed after
-15 days from their last activity. Issues closed in this manner will be 
-labeled 'stale'.
+
+Build Instructions for Qt5 Linux Wallet (Ubuntu)
+================================================
+//Install dependencies via Terminal:
+
+$ sudo apt-get install make libqt5webkit5-dev libqt5gui5 libqt5core5a libqt5dbus5 qttools5-dev qttools5-dev-tools qtcreator libprotobuf-dev protobuf-compiler build-essential libboost-dev libboost-all-dev libboost-system-dev libboost-filesystem-dev libboost-program-options-dev libboost-thread-dev libssl-dev libdb++-dev libstdc++6 libminiupnpc-dev libevent-dev libcurl4-openssl-dev git libpng-dev qrencode libqrencode-dev
+
+//In terminal navigate to the Brexit-1.1.0.0 folder:
+
+$ cd /home/Brexit-1.1.0.0
+
+//Then:
+
+$ qmake -qt=qt5 "USE_QRCODE=1" "USE_UPNP=1"
+
+//Then:
+
+$ make
+
+//This will compile and build the Qt Wallet which takes a little while, please be patient.
+
+//When finished you will have a file called Brexit - Simply Double Click
+
+//end of guide
+
+
+
+Build Instructions for Terminal Based Linux Wallet (Ubuntu)
+===========================================================
+//Install dependencies via Terminal:
+
+$ sudo apt-get install build-essential libboost-all-dev libssl-dev libcurl4-openssl-dev libminiupnpc-dev libdb++-dev libstdc++6 make 
+
+//In terminal navigate to the Brexit-1.1.0.0 folder:
+
+$ cd /home/Brexit-1.1.0.0/src/
+
+//Enter into the terminal:
+
+$ make -f makefile.unix USE_UPNP=1
+
+//This will produce a file named trollcoind which is the command line instance of TrollCoin
+
+//Now type:
+
+$ strip brexitd
+
+//When finished you will have a file called brexitd
+
+//To run Brexit
+
+$ ./brexitd & 
+
+//It will complain about having no brexit.conf file, we'll edit the one provided and move it into place
+
+$ cd ..
+$ nano brexit.conf
+
+//Edit the Username and Password fields to anything you choose (but remember them) then save the file
+
+$ mv brexit.conf /home/.trollcoin/
+$ cd src/
+$ ./brexitd &
+
+//The server will start. Here are a few commands, google for more.
+
+$ ./brexitd getinfo
+$ ./brexitd getmininginfo
+$ ./brexitd getnewaddresss
+
+//end of guide
