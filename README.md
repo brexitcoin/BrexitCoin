@@ -75,7 +75,7 @@ $ cd /home/Brexit-1.1.0.0/src/
 
 $ make -f makefile.unix USE_UPNP=1
 
-//This will produce a file named trollcoind which is the command line instance of TrollCoin
+//This will produce a file named Brexitcoind which is the command line instance of BrexitCoin
 
 //Now type:
 
@@ -94,7 +94,7 @@ $ nano brexit.conf
 
 //Edit the Username and Password fields to anything you choose (but remember them) then save the file
 
-$ mv brexit.conf /home/.trollcoin/
+$ mv brexit.conf /home/.Brexitcoin/
 $ cd src/
 $ ./brexitd &
 
