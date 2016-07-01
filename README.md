@@ -55,6 +55,7 @@ or cd/home/<user>/Brexitcoin
 //Then:
 
 $ chmod -R 775 ./src/leveldb
+
 $ qmake -qt=qt5 "USE_QRCODE=1" "USE_UPNP=1"
 
 //Then:
