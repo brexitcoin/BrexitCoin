@@ -1,4 +1,5 @@
 # **Brexit (BRXT) Version 1.1.0.0**
+#Date Last Compiled : July 1sy 2016 #
 
 Brexit Integration/Staging Tree
 ================================
@@ -41,12 +42,19 @@ Build Instructions for Qt5 Linux Wallet (Ubuntu)
 
 $ sudo apt-get install make libqt5webkit5-dev libqt5gui5 libqt5core5a libqt5dbus5 qttools5-dev qttools5-dev-tools qtcreator libprotobuf-dev protobuf-compiler build-essential libboost-dev libboost-all-dev libboost-system-dev libboost-filesystem-dev libboost-program-options-dev libboost-thread-dev libssl-dev libdb++-dev libstdc++6 libminiupnpc-dev libevent-dev libcurl4-openssl-dev git libpng-dev qrencode libqrencode-dev
 
+// Download from GIT or USE : GIT clone 
+ 
+$ git clone git://github.com/brexitcoin/brexitcoin.git
+
+
 //In terminal navigate to the Brexit-1.1.0.0 folder:
 
-$ cd /home/Brexit-1.1.0.0
+$ cd /home/Brexitcoin
+or cd/home/<user>/Brexitcoin
 
 //Then:
 
+$ chmod -R 775 ./src/leveldb
 $ qmake -qt=qt5 "USE_QRCODE=1" "USE_UPNP=1"
 
 //Then:
@@ -59,17 +67,25 @@ $ make
 
 //end of guide
 
+you may copy this you your /usr/bin directory 
+
+cp brexit-qt /usr/bin/
+
+Suggestion create a shortcut on desktop to /usr/bin/britex-qt
 
 
+===========================================================
 Build Instructions for Terminal Based Linux Wallet (Ubuntu)
 ===========================================================
 //Install dependencies via Terminal:
 
 $ sudo apt-get install build-essential libboost-all-dev libssl-dev libcurl4-openssl-dev libminiupnpc-dev libdb++-dev libstdc++6 make 
 
-//In terminal navigate to the Brexit-1.1.0.0 folder:
+//In terminal navigate to the Brexitcoin-master folder:
 
-$ cd /home/Brexit-1.1.0.0/src/
+$ cd /home/Brexitcoin/src/
+
+ Note : If you have trouble with leveldb , try chmod -R 775 ./leveldb/
 
 //Enter into the terminal:
 
