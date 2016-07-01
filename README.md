@@ -68,7 +68,7 @@ $ make
 
 //end of guide
 
-you may copy this you your /usr/bin directory 
+you may copy this qt file to your /usr/bin directory 
 
 cp brexit-qt /usr/bin/
 
