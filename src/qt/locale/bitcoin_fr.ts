@@ -2735,8 +2735,8 @@ for example: alertnotify=echo %%s | mail -s &quot;Brexit Alert&quot; admin@foo.c
     </message>
     <message>
         <location line="+5"/>
-        <source>Listen for connections on &lt;port&gt; (default: 7511 or testnet: 25714)</source>
-        <translation>Écouter les connexions sur le &lt;port&gt; (par défault: 7511 ou testnet: 25714)</translation>
+        <source>Listen for connections on &lt;port&gt; (default: 7611 or testnet: 25714)</source>
+        <translation>Écouter les connexions sur le &lt;port&gt; (par défault: 7611 ou testnet: 25714)</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2785,8 +2785,8 @@ for example: alertnotify=echo %%s | mail -s &quot;Brexit Alert&quot; admin@foo.c
     </message>
     <message>
         <location line="+62"/>
-        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 7512 or testnet: 25715)</source>
-        <translation>Écouter les connexions JSON-RPC sur le &lt;port&gt; (default: 7512 or testnet: 25715)</translation>
+        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 7612 or testnet: 25715)</source>
+        <translation>Écouter les connexions JSON-RPC sur le &lt;port&gt; (default: 7612 or testnet: 25715)</translation>
     </message>
     <message>
         <location line="-16"/>

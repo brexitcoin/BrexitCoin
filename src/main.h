@@ -54,9 +54,9 @@ static const unsigned int LOCKTIME_THRESHOLD = 500000000; // Tue Nov  5 00:53:20
 
 static const int64_t COIN_YEAR_REWARD = 4 * CENT;
 
-inline bool IsProtocolV1RetargetingFixed(int nHeight) { return TestNet() || nHeight > 2800; }
-inline bool IsProtocolV2(int nHeight) { return TestNet() || nHeight > 2800; }
-inline bool IsProtocolV3(int64_t nTime) { return TestNet() || nTime > 1444028400; }
+inline bool IsProtocolV1RetargetingFixed(int nHeight) { return TestNet() || nHeight > 62016; }
+inline bool IsProtocolV2(int nHeight) { return TestNet() || nHeight > 62016; }
+inline bool IsProtocolV3(int64_t nTime) { return TestNet() || nTime > 1467633600; }
 
 static const int64_t workDrift = 10 * 60; // 600 seconds
 static const int64_t stakeDrift = 10 * 64; // 640 seconds
@@ -580,7 +580,7 @@ class CBlock
 {
 public:
     // header
-    static const int CURRENT_VERSION = 2;
+    static const int CURRENT_VERSION = 1;
     int nVersion;
     uint256 hashPrevBlock;
     uint256 hashMerkleRoot;

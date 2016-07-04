@@ -21,6 +21,7 @@ struct SeedSpec6 {
 
 #include "chainparamsseeds.h"
 
+
 //
 // Main network
 //
@@ -49,14 +50,14 @@ public:
         // The message start string is designed to be unlikely to occur in normal data.
         // The characters are rarely used upper ASCII, not valid as UTF-8, and produce
         // a large 4-byte int at any alignment.
-        pchMessageStart[0] = 0x58;
-        pchMessageStart[1] = 0xca;
-        pchMessageStart[2] = 0x9e;
-        pchMessageStart[3] = 0xa4;
-        vAlertPubKey = ParseHex("0486bce1bac0d543f104cbff2bd23680056a3b9ea05e1137d2ff90eeb5e08472eb500322593a2cb06fbf8297d7beb6cd30cb90f98153b5b7cce1493749e41e0284");
-        nDefaultPort = 7511;
-        nRPCPort = 7512;
-        bnProofOfWorkLimit = CBigNum(~uint256(0) >> 20);
+        pchMessageStart[0] = 0xb7;
+        pchMessageStart[1] = 0x67;
+        pchMessageStart[2] = 0xb0;
+        pchMessageStart[3] = 0x00;
+        vAlertPubKey = ParseHex("044394dd9f4c40c7f88c8979f2c6a3e4a4eb0f978c20112ef203df6de71c31498101e6f99c25a36a73d1f859756d09007ccc4526fff3f221ae24fb2a3e9e2fab5a");
+        nDefaultPort = 7611;
+        nRPCPort = 7612;
+        bnProofOfWorkLimit = CBigNum(~uint256(0) >> 16);
 
         // Build the genesis block. Note that the output of the genesis coinbase cannot
         // be spent as it did not originally exist in the database.
@@ -66,7 +67,7 @@ public:
         //    CTxIn(COutPoint(0000000000, 4294967295), coinbase 00012a24323020466562203230313420426974636f696e2041544d7320636f6d6520746f20555341)
         //    CTxOut(empty)
         //  vMerkleTree: 12630d16a9
-        const char* pszTimestamp = "IMF Boss Markets Got Brexit Prediction Wrong June 26th 2017 ";
+        const char* pszTimestamp = "IMF Boss Markets Got Brexit Prediction Wrong";
         std::vector<CTxIn> vin;
         vin.resize(1);
         vin[0].scriptSig = CScript() << 0 << CBigNum(42) << vector<unsigned char>((const unsigned char*)pszTimestamp, (const unsigned char*)pszTimestamp + strlen(pszTimestamp));
@@ -78,13 +79,14 @@ public:
         genesis.hashPrevBlock = 0;
         genesis.hashMerkleRoot = genesis.BuildMerkleTree();
         genesis.nVersion = 1;
-        genesis.nTime    = 1467051682;
+        genesis.nTime    = 1467640833;
         genesis.nBits    = 0x1e0fffff;
-        genesis.nNonce   = 166307;
+        genesis.nNonce   = 217629;
 
         hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256("0x000004c9f8db4e9501320efb1de8012e57e31fa52e8e1b9ccc18103a79f5d312"));
-        assert(genesis.hashMerkleRoot == uint256("0xacd362f2b57c2f3c0f968669df4a766f08cba7e14e2712beb60b4f8c65860234"));
+
+        assert(hashGenesisBlock == uint256("0x00000420f0363f64f0e159fa35604cf4eec7fd13038849229f1d84b7f1f38f1c"));
+        assert(genesis.hashMerkleRoot == uint256("0x6082c39c4274874dcfc9447327bd6b8071f2d8ba4458909b3d494c5bfa6e6569"));
 
         base58Prefixes[PUBKEY_ADDRESS] = list_of(25);
         base58Prefixes[SCRIPT_ADDRESS] = list_of(85);
@@ -94,7 +96,7 @@ public:
 
         convertSeed6(vFixedSeeds, pnSeed6_main, ARRAYLEN(pnSeed6_main));
 
-		vSeeds.push_back(CDNSSeedData("node.brexit.co.in", "95.211.57.108"));
+		vSeeds.push_back(CDNSSeedData("", ""));
 
         nLastPOWBlock = 62016;
     }
@@ -122,14 +124,14 @@ public:
         // The message start string is designed to be unlikely to occur in normal data.
         // The characters are rarely used upper ASCII, not valid as UTF-8, and produce
         // a large 4-byte int at any alignment.
-        pchMessageStart[0] = 0xb7;
-        pchMessageStart[1] = 0x67;
-        pchMessageStart[2] = 0xb0;
-        pchMessageStart[3] = 0x00;
+        pchMessageStart[0] = 0x58;
+        pchMessageStart[1] = 0xca;
+        pchMessageStart[2] = 0x9e;
+        pchMessageStart[3] = 0xa4;
         bnProofOfWorkLimit = CBigNum(~uint256(0) >> 16);
         vAlertPubKey = ParseHex("0471dc165db490094d35cde15b1f5d755fa6ad6f2b5ed0f340e3f17f57389c3c2af113a8cbcc885bde73305a553b5640c83021128008ddf882e856336269080496");
-        nDefaultPort = 17512;
-        nRPCPort = 17512;
+        nDefaultPort = 17612;
+        nRPCPort = 17612;
         strDataDir = "testnet";
 
         // Modify the testnet genesis block so the timestamp is valid for a later start.

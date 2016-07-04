@@ -32,8 +32,8 @@ Brexit is a digital currency that enables instant payments to anyone, anywhere i
 
 
 **MainNet Parameters**
-P2P Port = 7511
-RPC Port = 7512
+P2P Port = 7611
+RPC Port = 7612
 
 
 Build Instructions for Qt5 Linux Wallet (Ubuntu)
