@@ -1,5 +1,7 @@
-# **Brexit (BRXT) Version 1.1.0.1**
-#Date Last Compiled : July 4th 2016 #
+# **Brexit (BRXT) Version 1.1.0.1a**
+#Date Last Compiled : July 29th 2016 #
+
+Update of NVersion Check Updated July 29th 2016 
 
 Brexit Integration/Staging Tree
 ================================
